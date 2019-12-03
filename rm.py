@@ -148,9 +148,9 @@ def main():
 		rm = random_melody(note_list, octave_low, octave_high, dur_list)
 		rm_seq, rm_data = rm
 		print(rm_seq)
-		store_rm(rm_data, 'random_melody_in_G_1_data.csv')
+		store_rm(rm_data, 'random_melody_in_C_data.csv')
 	elif new == 'n':
-		rm_data = open_rm('random_melody_in_C_3_data.csv')
+		rm_data = open_rm('random_melody_in_C_data.csv')
 		rm_seq = NoteSeq() #rm_seq = NoteSeq([Note(int(p[0])) for p in rm_data])
 		for p in rm_data:
 			rm_seq.append(Note(p[0], p[1], p[2], p[3]))
@@ -160,7 +160,7 @@ def main():
 	# gen_midi(rm_seq, cprog6251r, cprog62513, 'random_melody_in_C_3.mid')
 	fsprog = fusion_prog_rym(rm_data, [0], [10, 11], [14])
 	fsprogr, fsprog7, fsprog9 = fsprog
-	gen_midi(rm_seq, fsprogr, fsprog7, fsprog9, 'random_melody_in_C_3_2.mid')
+	gen_midi(rm_seq, fsprogr, fsprog7, fsprog9, 'random_melody_in_C_.mid')
 
 main()
 
